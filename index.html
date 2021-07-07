@@ -1,0 +1,37 @@
+<head>
+    <title>
+            My Family Book
+    </title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1>
+        My Family Book
+    </h1>
+    <br>
+    <br>
+    <img src = "WhatsApp Image 2021-07-04 at 1.26.42 PM.jpeg" id = "img">
+    <h4 id = "text">
+        Dr. Darshna Jain
+    </h4>
+    <button id = "button" onclick = "update();" type = "button">Next</button>
+</body>
+<script>
+    var image = ["","gaurav.jpeg","nanu nani.jpeg","dadu dadi.jpeg","me.jpeg"]
+    var text = ["Dr. Darshna Jain","Dr. Gaurav Yadav","Mr. S.K. Jain and Mrs. Usha Jain","Mr. Ishwar Lal Yadav and Mrs. Saroj Yadav","Atishay Yadav"]
+    var i = 0;
+    function update() 
+    {
+        i++;
+        var nofm = 5
+        if(i > nofm )
+        {
+            i = 0;
+        }
+        var ui = image[i];
+        var un = text[i];
+        document.getElementById("text").innerHTML = un;
+        document.getElementById("img").src = ui;
+    } 
+
+        </script>
